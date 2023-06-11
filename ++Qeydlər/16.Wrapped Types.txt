@@ -1,0 +1,69 @@
+1. Wrapper Types - primitiv tiplerin classlaridir.
+Obyekt kimi isitfade etmek uchun lazim olur, onun uzerinde emeliyyatlar elemeye icaze verir.
+
+2. int     i1 = 5;
+   Integer i2 = new Integer(5);    // bu halda yeni refransla yaradir 
+   Integer i3 = 5;                 // burda ise deyer menimsetdiyinden, 
+                                   // bu deyeri eyni yerden goturubse referanslari eyni ola bilir
+   Double d = 5.99;
+   Character c = 'A';
+
+3. Referanslari nece teyin edir
+
+Integer i  = 5;               // 111   burda menimsetdiyimiz deyer 127 den kichik
+Integer i1 = 5;               // 111   oldugundan yeni referanslar menimsetmir. String pool kimi integer de ordan goturur
+Integer i2 = new Integer(5);  // 222
+Integer i3 = new Integer(5);  // 333
+
+i == i1    true     // referanslar eyni, 127-den boyuk osaydi ferqli olardi
+i == 5     true     // deyeri muqayise edir
+i2== 5     true     // deyeri muqayise edir
+i2== i3    false    // referanslar ferqli
+i == i3    false    // referanslar ferqli
+
+Obyekt ile deyeri muqayise etmek olmur (false olur)
+
+4. All Wrapper Types  in java
+byte	Byte
+short	Short
+int	Integer
+long	Long
+float	Float
+double	Double
+boolean	Boolean
+char	Character
+
+5. Sometimes you must use wrapper classes, 
+for example when working with Collection objects, such as ArrayList, 
+where primitive types cannot be used (the list can only store objects)
+
+6. Stringde yazilmish deyeri int-e chevirmek 
+int i = Integer.parseInt("4");
+
+7. Math.random
+
+8. Util.random
+
+9. String pool anlayshi
+
+10. i.equals(i2);   -> Referansa gore yox, Deyere gore muqayise
+
+11. int, string ve diger tiplerde equals anlayishi
+
+12. StringBuilderin append metodu
+    StringBuilder sb = new StringBuilder();
+    sb.append("Salam.");
+    sb.append("Necesen?");
+    String result = sb.tostring(); 
+
+13. Char massivinden String duzeltmek
+char[] arr = {'S','a','l','a','m'}
+String m = new String(arr);
+
+
+
+
+
+
+
+

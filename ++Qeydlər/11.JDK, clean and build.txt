@@ -1,0 +1,32 @@
+1. Proyekti Clean and Build etdikden sonra
+project/build/classes/test/Test.class   proyekti arxivlenmish .jar fayli kimi
+project/dist/project.jar                qovlugunda saxlanilir.
+
+2. Proyekti Clean eleyende proyektdeki build folderi silinir
+   Hem de dist-in icherisindeki .jar fayli, dist qovlugu da silinir
+
+3. Build eleyende proyektin src qovlugundaki .java fayllarindan 
+   build qovlugunda .class fayllari ve 
+   dist qovlugunda .jar fayli yaradilir
+
+4. Bir proyekti bashqa bir proyekte elave etmek uchun dist qovlugundaki .jar faylini
+   Properties -> Libraries -> Compile -> Add JAR or folder
+   sheklinde edirik
+
+5. .java faylini Select in Project eleyende Library-de harda oldugunu gosterir
+
+6. Eger Test.class faylinda IDE bezi kodlari decompile ede bilmirse, attach source elemekle source kodu tanida bilerik
+
+7. .java fayllari project/src qovlugunda yerleshir
+
+8. Proyekte elave olunmush birden chox diger proyekt ola biler
+   Proyektlerde deyishiklikler edilir,
+   Normalda esas proyekti Clean and Build eleyende 
+   onun Library-sinde olan diger proyektler de Clean and Build olunur.
+   Eger ishlemese birinci Library-ye elave olunmush proyektleri, 
+   daha sonra da esas proyekti Clean and Build elemeliyik.
+
+9. Eger birden chox .jar varsa onlari bir Library-ye yigib,
+   Hemin Library-ni proyekte elave ede bilerik.
+   Libraries -> Add Library -> Create -> add .jar's kimi edirik
+

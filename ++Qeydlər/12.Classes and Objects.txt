@@ -1,0 +1,78 @@
+1. Proyekt ishe dushende birinci classin icherisinde static main() metodunu axtarir.
+   Yeni static main() metodu olmasa class Run ola bilmez.
+
+2. Ilk once Classlar sonra da onun ichindeki static metodlar Run olur.
+
+3. Static olan metodlar bir-birilerini gorurler
+
+4. Static olan metodlar Static olmayan (non-Static) metodlari ve field-leri(deyishenleri) obyekt yaradilandan sonra gorur.
+
+5. Static olmayan metodun icherisinden Static metodlari chagira bilerik,
+   chunki static metodlar daha evvel yaranir.
+
+6. Onyekti yaradarken qarshisina static keyword-u elave etsek. hemin obyekt de static olmush olur.
+   yeni statsic metodlarla eyni anda yuklendiyinden onu metofun icherisinden gore bilerik.
+   
+7. Static deyishenini obyektin ichinden chagirmaq
+    public static void main(String[] args) {
+        User u = new User();
+        String companyNameFromClass = User.company;      //static company deyishenini classdan chagirmaq
+        String companyNameFromUserObject = u.company;    //static company deyishenini obyektin ichinden chagirmaq
+    }
+
+8. Referanslarin qirilmasi (referans obyektin yaddashdaki unvanidir bir nov)
+   User u = new User();   // referans 111 meselen
+   User uu = new User();  // referans 222 
+   u = uu;                // artiq 111 referansi u dan qirildi ve uu-nun 222 referansini goturdu
+                          // hem u hem de uu ozunde 222 referansini saxlayir. 
+                          // 111 ise Garbage Collector terefinden silinir
+
+9. Her hansi metoda deyishen oturen zaman 
+   Eger deyishenin tipi primitive-dirse oz deyerini kopyalayir ve hemin deyeri gonderir  //Path-by-Value
+   Eger non-primitive-dirse deyishenin bagli oldugu referansi oturur
+
+10. public static void main(String[] args) {}
+    main metodundaki String[] args hissesine 
+    NetBeansde Project -> Run -> Arguments 
+    bolmesinden argumnetler oture bilerik.
+    Argumentler aralarinda boshluq simvolu qoyularaq daxil edilmelidir
+
+11. Obyekt içerisinde obyekt yaratmaq Composition adlanir
+
+12. Encapsulation (Getter and Setters)
+
+13. Access Modifiers
+Access        within	within	     outside package 	    outside package
+Modifier      class	package	     by subclass only
+
+Private		Y	   N	            N	                    N
+Default		Y	   Y	            N			    N
+Protected	Y	   Y	            Y			    N
+Public		Y	   Y	            Y			    Y
+
+14. Non-Access Modifiers
+static
+final
+abstract
+synchronized
+volatile
+transient
+native
+
+15. Imports
+import test.*;               // test package-inin icherisindeki butun Classlari import edir
+import test.Util;            // test package-inin icherisindeki Util Class-ini import edir
+import test.Util.*;          // test package-inin icherisindeki Util Class-inin metodlarini chagirir
+                             // Class-i chagira bilmediyinden Obyektini yarada bilmir
+import static test.Util;     // test package-inin icherisindeki Util Class-inin static-leri chagirmaq olur
+                             // ve ancaq statikler oldugundan Obyekt yaratmaga icaze vermir 
+
+16. Metodun icherisinde olan deyishenler - Local Variables
+Class-in icherisindeki static deyishenler - Class Variables
+Class-in icherisindeki non-static deyishenler - Instance Variables(Atributs)
+
+17. Tipi Class olan massiv yaradaraq icherisine hemin classin obyektlerini doldura bilerik.
+
+18. POJO - Plain Old Java Object  -  Obyekti yaratmaq mumkun olan istenilen class POJO-dur.
+
+19. Eger Class Encapsulation qaydalarina (getter and setter) riayet edirse ve data dashiyicisidirsa BEAN adlanir.

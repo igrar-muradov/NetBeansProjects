@@ -1,0 +1,97 @@
+1. Compireson Operators  <  >  >=  <=  ==  !=   
+   boolean tipinde deyer qaytarir
+
+2. Assignment (menimsetme) Operators   =   +=  -=  *=  /=   %=   (c %= c3;)
+
+3. Logical Operators    && (and)     || (or)      !(a<=b) (not)
+
+4. Scanner classinin obyektini yaratmaq ve nextLine() ve ya nextInt() metodunu chagirmaq
+   Scanner sc = new Scanner(System.in);
+   int i = sc.nextInt();
+
+5. if, else, else if, switch case,
+   Əgər if-dən sonra {blok} açılmasa if-den sonraki bir ancaq 1 setir if-e daxildir.
+
+6. for (int i = 0; i < 10; i++) {
+      System.out.println("Salam");
+   }
+      
+   for(1-ci hisse ; 2-ci hisse; 4-cu hisse){
+      //3-cu hisse
+   }
+1-ci hissede Deyishenleri elan eleyir (doldurmaq vacib deyil)
+2-ci hissede Şərt ödənsə dövrə girir (boş saxlasaq default boolean deyeri goturur)
+3-cü hissede Əgər şərt ödənib dövrə girsə bu blokdakı əməliyyatı icra edir
+4-cü hissede bloku icra etdikdən sonra burda yazilan kod icra olunur (doldurmaq vacib deyil)
+ve 2-ci merheleye qayidir
+
+7. while() { //emeliyyat };
+
+8. do { //emeliyyat } while ();  (Ilk dovre sherti yoxlamadan girir)
+
+9. Switch Case
+double result = 0;
+switch (a) {
+   case 1:
+       result = a*a;
+       break;
+   case 2:
+       result = a+b;
+       break;
+   default:          //optional
+       sout("in any case it will be printed")  //optional
+       break;        // optional
+}
+return result;
+
+Note:  Eger break olmasa shert odenilen case ve ondan ashagidaki butun caseler icra olunur
+
+10. continue - Dovurde eger {//emeliyyat} blokunun ichinde continue sozunu oxudusa emeliyyatin qalan hissesini icra elemir ve i++ (fordaki 4-cu merheleye keçir) ve novbeti dovre kecir
+
+11. break - Dovurde eger {//emeliyyat} blokunun ichinde break sozunu oxudusa dovr o setirde qirilir ve for ve ya diger operatordan tam chixir
+
+12. İçərisində psvm olan classlar Run olunabilən Classlardır
+Proyekt Run olunanda əgər birdən çox classda psvm varsa hansı classın run olacağını seçə bilərik
+NetBeans -> Project -> Properitis -> Run -> Main Class
+
+13. Metodlar
+// main Method
+psvm{
+  double r = topla(3,4);  // burda olan 3 ve 4 Argumentler adlanir
+  sout("r = "+r);
+}
+
+//bizim yaratdigimiz Method
+public static double topla( double a, double b){    // burda olan double a ve double b Parametrler adlanir 
+                                                    // nurda topla() metodundan evvelki tip return eleyeceyimiz tipi gosterir
+  return a+b;
+}
+// eger metod geriye deyer qaytarmirsa onda tip yerine void yaziriq ve return statementini legv edirik
+//eger blokda birden chox return varsa shert odenib ilk qarshilashdigi return-i qaytariri ve blok qalan kodu oxumur
+
+14. Method Overloading
+   Eyni adda birden chox method ola biler.
+   Onlar ya qebul etdiyi paramaet sayina gore, 
+   ya da parametr sayi eyni olub parameterin tiplerine gore ferqlenirler.
+
+15. Iki ferqli classda eyni adda metod varsa 
+meselen 
+     
+     package MyFirstApp
+           class Main
+     package util
+           class Main
+		calculate()
+classi butov shekilde import elemek olmur
+import util.Main;
+
+onun evezine metoda olan path-i butev yazmaliyiq
+import util.Main.calculate();
+
+16. Rekursiya metodun icherisinde ozunu chagirmasi (bunu haqqinda melumat eave elemek)
+
+
+
+
+
+

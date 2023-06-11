@@ -1,0 +1,12 @@
+implement Runnable ile Thread ishletmek
+1) Class-i "Runnable"-dan implement elmek ve istediyimiz kodlari @Override elediyimiz "public void run()" metodunun icherisinide yazmaliyiq 
+2)Basqa bir class da Thread-in obyektinin yaradiriq ve kanstruktora Runnable-dan extend elediyimiz hemin Classin obyektini gonderirik
+3)hemin Thread-in start() metodunu chigaririq
+
+extend ile Thread yaratmaq
+1)Calss-i Thread-den extend edirik
+2)run() metodunu override edirik
+3)start() metodunu chagiririq
+
+Thread.sleep(2000) statsic metodu threadi 2 saniye gozledir
+

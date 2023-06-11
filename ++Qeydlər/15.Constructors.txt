@@ -1,0 +1,48 @@
+1. Constuctor-lar Class-in obyektini yaratmaq uchun istifade edilir
+meselen User classinin constructor-u:  public User() {};
+Class-in Obyektini yaratmaq uchun new keyword-u yazilir ve daha sonra constructor chagrilir   
+new User();
+
+2. Constructor vasitesile obyektin deyishenlerine default deyerler menimsede bilerik
+meselen name surname yash teyin olunmayibsa
+public User(){
+    this.name = "name is not defined";
+    this.surname = "surname is not defined";
+    this.age = -1;
+}
+
+3. Hemchinin Construktora method elave etmekle obyekt yaradilan zaman metodu da chagira bilerik.
+
+4. Constructor-lar birden chox ola biler.
+   Onlar ya qebul etdiyi paramaet sayina gore, 
+   ya da parametr sayi eyni olub parameterin tiplerine gore ferqlenirler.  
+
+5. this keywordu vasitesile constructorlar bir birilerini chagira bilirler  
+public User(){
+   this("Not Defined","Not defined");  
+   sout("constructor-1");
+}
+public User(String name, String surname){
+// this.name="Ali"               // bu setirde olanda obyect hele yaradilmadigindan this.name deyisheni chagrila bilmez
+   this(name, surname, -1);
+   sout("constructor-2");
+}
+public User(String name, String surname, int age){     //Customer diger construktorlari chagirsa bele obyekti bu kons. yaradir
+    this.name = name;               // burda parametrde elan elediyimiz deyishen adi ile 
+    this.surname = surname;	    // classin deyisheninin adi eyni oldugundan classinkinde this ishledirik
+    this.age = age;
+   sout("constructor-3");
+}
+
+6. Constructorlarda super keywordu  (tamamlamaq)
+   super()-i en sonda duran constructor hansidisa o chagirir
+
+
+
+
+
+
+
+
+
+ 

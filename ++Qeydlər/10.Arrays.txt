@@ -1,0 +1,21 @@
+1. Massiv (Array) eyni tipde olan deyishenleri yadda saxlamaq uchun istifade edilir.
+int[] arr = {3,1,2,5,4};   // blokda olan elementleri massive duzur;
+int[] arr2 = new int[5];   // uzunlugu 5 olan bosh massiv yaradir;
+
+2. Massivlerde indexleme sifirdan bashlayir
+int a = arr[4];  // a deyishenine arr massivinin 4-cu indexinde olan deyeri menimsedir
+arr[3] = 23;      // massivin 3-cu elementine 23 deyeri menimsedilir;
+sout(arr[2]);
+
+3. Ikiolchulu massiv 
+int[][] mass = new int[2][5]; 2 elementli int[] massivi var ve her bir elementi 5 elemntli int[] massividi
+00000
+00000
+arr.length = 2     //ikiolchulu massivin setirlerinin sayi
+arr.length[1] = 5  // ikiolchulu massivin 2-ci setrinin uzunlugu
+
+
+
+
+
+

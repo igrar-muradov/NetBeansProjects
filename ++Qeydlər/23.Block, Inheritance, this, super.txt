@@ -1,0 +1,73 @@
+1. Static blok - Proyekt ishe dushenden sonra, Class-in metod ve ya field-ini chagiranda,
+                 ve ya Obyektini yaradanda ilk yuklenen dushen hissedir.
+                 Static blok tekce bir defe ishe dushur, novbeti defe Class-i chagiranda
+                 ve ya Obyektini yaradanda ishe dushmur.
+   static {}
+
+2. Non-Static block or Instance block - Obyekt yaradilan zaman, 
+                 Constructor birinci Non-Static bloku chagirir, yeni oyyekt yaranmazdan evvel ishe dushur.
+                 dolayisiyla her Yeni obyekt yaradilanda blok yeniden chagrilir.
+                 (Eger 1 den chox constructor varsa, Obyekti yaradan constructor bloku chagirir)
+                 (Eger constructorlar eyni kodlar ile bashlayirsa, hemin ortaq kodu blocka yaza bilerik)
+   {}
+
+3. Class.forName("main.User");  -  Class-in static blokunu yuklemek uchun istifade olunur.
+				
+
+----------- Inheritance ----------
+
+4. Classin obyekte mexsus non-static deyishenleri State ve metodlari ise Behaviour adlanir
+
+5. Iki (User ve Teacher) classimiz var, bu classlarin ortaq name, surname, age
+   State-leri varsa, Person adli bir class-a elave ederek hemin classdan extend eleye bilerik
+   Person ustclass (ParentClass), Teacher ise altclass (ChildClass) adlanir
+   ortaq metodlari varsa @Override ede bilerik
+   public class User extends Person {}
+
+6. Constuctorlar eyni classin ichinde bir birilerini this() ile chagirir
+   super()-i ise obyekti yaratmaq constructor chagirir.
+   super() ustclassin constructorunu chagirir
+   meselen ust classin parametrli constructorunu chagirmaq uchun
+   public User(){
+	super("name")
+   }
+
+7. Person(String name){}  constructorunu yaradan zaman, default constructor olan Person(){}
+   legv olunur ve yalniz Person(String name){} parametrli constructoru qalir
+
+8. Butun classlar eger extend olunmayibsa birbasha Object classindan,
+   Student -> Object
+   eger olunubsa dolayi yolla gedib Objectden extende edir. Obyekti en sonda duran Object classi initialise edir (yaradir).
+   Teacher -> Person -> Object
+
+9. Initialize - deyishene ilk defe deyer (obyectin referansi) menimsetmekdir.
+
+-------- this, this(), super, super() -------------------
+
+10. this.name or this.foo()
+   Obyektin aid oldugu Classin (child Class) ichindeki deyishen ve metodlari chagirir
+
+11. this();
+   Obyektin aid oldugu Classin (child Class) ichindeki constructorlari chagirir
+  
+12. super.name or super.foo()
+   Ust Classin ichindeki deyishen ve metodlari chagirir
+
+11. super();
+   Ust classin ichindeki constructorlari chagirir
+
+13. Eger UstClass-in ichinde ve Alt Classdaki metodlar ile eyni adda metod yoxdursa 
+    super evezine this yazaraq Ust Classdaki metodu chagira bileri
+
+
+
+
+
+
+
+
+
+				   
+
+
+

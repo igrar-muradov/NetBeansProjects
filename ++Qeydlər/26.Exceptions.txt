@@ -1,0 +1,57 @@
+1. Exceptionlar proyecy run olandan sonra her hansi duzgun olmayan deyer daxil edilerse ve ya xeta bash verecek hal olarsa 
+   bu vaxti ne edeceyini onceden teyin etmeye imkan verir
+
+2. Eger Exception tutulmayandisa compile olunan zaman bize problem yaratmir,
+   Eger xetali deyishen daxil edirse proyekt fail olur ve dayanir, 
+   try{}catch(Exception ex){} ile Exceptionu catch eleseydik proyekt davam edir
+
+
+3. Eger Exception Tutulandirsa compile olunan zaman problem yaranir,
+   koddaki hemin Exception atan hisseni try{}catch(Exception ex){} elemeliyik.
+   Eger try blokundaki kod exception atsa catch blokundaki kod icra olunur ve proyect davam edir
+
+4. Exception classini extend ederek oz CustomException classimizi yarada bilerik
+
+5. throw new ExceptionClass1(manual olaraq exception tullayir)
+
+6. Yazdigimiz metoddaki setirdeki kodun atdigi Exceptionu ozumuz tutmaq istemirikse,
+   methodun adinin sonuna throws Exception yaziriq
+   Belelikle methodu kim chagirdisa exceptionu o tutacaq.
+   Eger Exception-u JVM-in tutmasini isteyirikse Calssin adinin yaninda throws Exception yaziriq
+
+-------------------------------------------------
+
+
+7. The setDefaultUncaughtExceptionHandler() method is used to set a default uncaught exception handler for all threads in the JVM. Here's how you can use it:
+
+Create a class that implements the Thread.UncaughtExceptionHandler interface. This interface has a single method called uncaughtException(), which you need to override. This method is invoked when an uncaught exception occurs in a thread.
+Here's an example implementation of a custom exception handler:
+
+java
+Copy code
+public class CustomExceptionHandler implements Thread.UncaughtExceptionHandler {
+    @Override
+    public void uncaughtException(Thread t, Throwable e) {
+        // Handle the exception here
+        System.out.println("CustomExceptionHandler: An uncaught exception occurred!");
+        System.out.println("Thread: " + t.getName());
+        System.out.println("Exception: " + e.getMessage());
+        e.printStackTrace();
+    }
+}
+Set the custom exception handler as the default uncaught exception handler for all threads in the JVM by calling setDefaultUncaughtExceptionHandler() in your main() method or at the beginning of your application.
+Here's an example of setting the custom exception handler as the default for all threads:
+
+java
+Copy code
+public class Main {
+    public static void main(String[] args) {
+        // Set the custom exception handler as the default for all threads
+        Thread.setDefaultUncaughtExceptionHandler(new CustomExceptionHandler());
+
+        // Rest of your code...
+    }
+}
+By setting the default uncaught exception handler, any uncaught exceptions occurring in any thread within the JVM will be handled by your CustomExceptionHandler.
+
+Please note that the custom exception handler set using setDefaultUncaughtExceptionHandler() will only handle uncaught exceptions in threads where no specific uncaught exception handler is set. If a thread has its own exception handler set using setUncaughtExceptionHandler(), that specific handler will take precedence.

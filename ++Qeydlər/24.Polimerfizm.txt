@@ -1,0 +1,41 @@
+1. Cat and Dog class-lari Animal Classindan extend edir. (aralarinda is-a Elaqesi var)  
+
+   Cat c = new Cat();      // c heqiqetde Cat classinin obyektidi
+   Animal a = c;           // Burda Cat classinin obyektini Animal classina cast edirik. (up-Casting)
+                           // Up-Casting avtomatik, down-Casting ise manual gedir;
+                           // Bu zaman Cat classinin Animal-a aid olan hisselerini chagirmaq olur.
+   Cat cc = (Cat) a;       // Burda heqiqetde Cat classinin obyekti olan a-ni yeniden Cat classina cast edirik. (down-Casting)
+   
+   sout(c instanceof Animal)  ->   true
+   sout(c instanceof Cat)     ->   true
+   sout(c instanceof Dog)     ->   false
+
+   a heqiqetde Cat obyekti olmasina baxmayaraq ozunu Animal obyekti kimi aparirir.
+   Bu polymorphizm adlanir;
+   Yeeni istenilen a (Animal) obyekti teleb olunan yere c (Cat) obyektini gondere bilerik.
+
+2. Animal a = new Cat();
+   Yaranan Cat obyektinin ancaq Animal-a aid hissesine baxilir
+
+3. Cat c = (Cat) a;
+   a-ni Cat-e cast ederek, original olaraq Cat obyekti kimi istifade ede bilerik
+
+4. Bir obyekt digerinden extend eleyende aralarinda Is-a Elaqesi olur.
+   Obyektin icherisinde bashqa bir obyekt saxlayanda Has-a Elaqesi olur 
+
+5. Əgər Ust-Class ile Alt-Classin eyni adda eyni parametrli methodlari varsa,
+   Alt-Class Ust-Classin hemin methodunu @Override edir
+   Animal classinda ve Cat classinda eat() Override olunmush metod varsa
+   Animal a = new Cat();
+   a.eat() - chagiranda Cat-classinin ichindeki method icra olunur
+
+6. Əgər Ust-Class ile Alt-Classin eyni adda deyishenler varsa,
+   Alt-classin deyisheni Hidden olur
+   Animal a = new Cat();
+   a.name - chagiranda Animal-classinin ichindeki name chagrilir
+
+7. Final olmush classi Extend etmek olmur
+
+8. Final olunmuş deyishene tekce bir defe deyer menimsede bilerik
+
+9. Final elan olunmuş metod @Override oluna bilmez

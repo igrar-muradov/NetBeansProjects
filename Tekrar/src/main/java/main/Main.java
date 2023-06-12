@@ -10,10 +10,17 @@ package main;
  */
 public class Main {
 
-    public static void main(String[] args) throws ClassNotFoundException {
-        System.out.println("User class not loaded");
-        Class.forName("main.User");
-        Class.forName("main.User");
-
+    public static void main(String[] args) {
+        Cat c = new Cat();
+        Dog d = new Dog();
     }
+
+    public static void test(Animal a) {
+        if (a instanceof Cat) {
+            Cat a2 = (Cat) a;
+        } else if (a instanceof Dog) {
+            Dog a2 = (Dog) a;
+        }
+    }
+    
 }

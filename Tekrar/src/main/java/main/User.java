@@ -9,16 +9,23 @@ package main;
  * @author Igrar
  */
 public class User {
-    public User(){
+
+    
+    
+    
+    
+    public User() {
         System.out.println("User yaradildi");
     }
-    static{
+
+    static {
         System.out.println("Static block");
     }
+
     {
         System.out.println("Instance block");
     }
-    
+
     public static void foo() {
         System.out.println("Foo method invoked");
     }

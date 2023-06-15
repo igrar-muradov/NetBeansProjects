@@ -14,7 +14,7 @@ public class Main {
     // type Erasure 
 
     public static void main(String[] args) {
-        Container<User> container = new Container<User>(new User());
+        Container<User> container = new Container<>(new User());
         container.doItAndReturn();
         doSomething(container);
         

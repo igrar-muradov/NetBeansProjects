@@ -1,0 +1,24 @@
+1. Encapsulation qaydalarini odeyen Class-a BEAN deyirik
+
+2. Class və methodları Abstract eləyəndə, 
+   həmin Classın Subclassları həmin methodlarını Override eləməyə məcbur edir,
+   həmin Classın obyectini yaratmağa qoymur
+
+3. Abstract methodun body hissəsi (yəni blocku) olmur
+
+4. Abstract classın içində Abstract olmayan method (Concrete method) yarada bilərik
+
+---------------- Interfaces ---------------------
+
+5. Interface-in də Abstract kimiç onun da obyekti yaradılmaz
+
+6. Default olaraq Interface-lərdə methodlar həm public, həm də abstractdır
+
+7. Əgər methoda body əlavə etmək istəsək qarşısına default keyword-ü əlavə etməliyik
+
+8. Dəyişənlər final olur. Final olduğu üçün elan olunan kimi dəyər verməliyik
+
+9. Marker interface - içərisində heç nə olmayan, sırf xüsusiyyət vermək üçün istifadə olunur
+
+10. Reflection vasitəsilə classa aid olan bütün məlumatları götürmək olur
+

@@ -11,16 +11,21 @@ package main;
 public class Main {
 
     public static void main(String[] args) {
-        Cat c = new Cat();
-        Dog d = new Dog();
-    }
-
-    public static void test(Animal a) {
-        if (a instanceof Cat) {
-            Cat a2 = (Cat) a;
-        } else if (a instanceof Dog) {
-            Dog a2 = (Dog) a;
-        }
+        String s = new String("Java");
+        String ss = new String("Java");
+        System.out.println("s+ss "+s.equals(ss));
+        
+        Object sObj = s;
+        Object ssObj = ss;
+        System.out.println("sObj+ssObj "+sObj.equals(ssObj));
+        
+        Animal c = new Cat();
+        Animal d = new Dog();
+        
+        c.eat();
+        d.eat();
+        
+        
     }
     
 }

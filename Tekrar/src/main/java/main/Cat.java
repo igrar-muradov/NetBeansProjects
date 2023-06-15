@@ -8,6 +8,10 @@ package main;
  *
  * @author Igrar
  */
-public class Cat extends Animal{
-    
+public class Cat extends Animal {
+
+    @Override
+    public void eat() {
+        System.out.println("Cat eating");
+    }
 }

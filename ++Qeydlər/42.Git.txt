@@ -1,0 +1,7 @@
+1. git clone https://github.com/....proyektin.linki...   
+proyekti klonlayacagiiz folderin ichine kechirik ve proyektin adi ile eyni olan folder yaradaraq klonlayir
+
+2. git pull .
+Current folderi githubdan update edir
+
+3. git add

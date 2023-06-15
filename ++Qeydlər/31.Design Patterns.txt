@@ -1,0 +1,46 @@
+1. Singletone Pattern    
+
+2. Class-ın private və static obyekti yaradılır.
+
+3. Constructor private olaraq yardılır
+
+4. Obyekti çağırmaq üçün Public və Static method yaradılır
+
+5. GoF - Gang of Four
+
+6. Immutable class - classın obyektini yaratdıqdan sonra, obyektin dəyişənlərin dəyərini dəyişmək olmur
+
+7. synchronized - method eyni anda gələn sorguları növbəyə salır
+
+8. StringBuffer -> synchronized
+
+9. StringBuilder -> nonsynchronized
+
+10. Builder Pattern - parametr sayı çox olduqda, constructorda bütün parametrləri yazmadan 
+                     classın obyektini yaratmaq üçün lazım olur
+
+11. Proxy Pattern
+
+12. Factory Pattern
+
+13. Abstract Factory Pattern
+
+14. SOLID Prinsiples
+S    -    Singleton Responsibility Prinsiple
+O    -    Open-closed Prinsiple (Bie Class öz daxilini dəyişməyə qapalı, amma extend eləməyə açıq olsun)
+L    -    Liskov's Substitution Prinsiple
+I    -    Interface Segregation Prinsiple
+D    -    Dependency Inversion Prinsiple
+
+ 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+1. @ ilə başlayan sözlər Annotationlardır
+
+2. @Override   -   Compile zamanı həqiqətən Override eləyib-eləmədiyini yoxlayan Annotation processordur
+
+3. Öz Annotationunumuzu və Annotation processorumuzu yarada bilərik
+
+@Target(ElementType. ...)
+@Retention(RetentionPolicy. ...)
+public @interface Bosholmasin{ }
+
+4. Teacher t = new Teacher();
+   t.getclass().getMethods();  -  classin icherisindeki ve superclassdan gelen bütün methodlari verir
+   t.getclass().getDeclaredMethods();  -  classin icherisindeki bütün methodlari verir
+
+5. Method m = method[i];
+   Annotation() anns = m.getAnnotations();
+
+6. CLASS - Annotation-un byte kodun ichinde qalmasini isteyirkse ishledirik
+
+7. RUNTIME - tekce Run-time zamani lazim olacaqsa
+
+8. SOURCE - compile zamani lazim olacaqsa

@@ -1,0 +1,113 @@
+1. Stringi fayla yazmaq uchun
+    private static void writeIntoFile(String fileName, String text, Boolean append) throws IOException {
+        FileWriter fw = new FileWriter(fileName, append);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(text);
+    }
+
+// Stringi fayla yazmaq uchun
+    public static void writeIntoFile(String fileName, String text) throws IOException {
+        writeIntoFile(fileName, text, false);
+    }
+
+// String olan fayli update elemek uchun
+
+    public static void appendToFile(String fileName, String text) throws IOException {
+        writeIntoFile(fileName, text, true);
+    }
+
+---------------------------------------------------------------------
+
+2. Baytlari fayla yazmaq
+
+    public static void writeBytes(String fileName, byte[] data) throws Exception {
+        FileOutputStream fop = new FileOutputStream(fileName);
+        fop.write(data);
+        fop.flush();
+        fop.close();
+    }
+
+------------------------------------------------------------------
+
+3. Text faylindan setir-be-setir oxumaq
+
+    public static String read(String fileName) throws Exception {
+        InputStream in = new FileInputStream(fileName);
+        InputStreamReader r = new InputStreamReader(in);
+        BufferedReader reader = new BufferedReader(r);
+        String line = null;
+        String result = "";
+        while ((line = reader.readLine()) != null) {
+            result += line + "\n";
+        }
+        return result;
+    }
+
+-----------------------------------------------------------------
+
+4. Fayli Bayt ile oxumaq
+
+    public static byte[] readBytes(String fileName) throws Exception {
+        File file = new File(fileName);
+        FileInputStream fin = new FileInputStream(file);
+        byte[] data = new byte[(int) file.length()];
+        fin.read(data);
+        return data;
+    }
+
+----------------------------------------------------------------
+
+   //Serialize etmek baytlara chevirmek demekdir
+5. Obyekti fayldan oxumaq
+
+    public static Object readFileDeserialize(String fileName) throws Exception {
+        Object obj = null;
+        FileInputStream fin = new FileInputStream(fileName);
+        ObjectInputStream in = new ObjectInputStream(fin);
+        obj = in.readObject();
+        return obj;
+    }
+
+----------------------------------------------------------------
+
+6. Obyekti fayla yazmaq
+
+    public static void writeObjectToFile(Serializable obj, String fileName) throws Exception {
+        FileOutputStream fout = new FileOutputStream(fileName);
+        ObjectOutputStream out = new ObjectOutputStream(fout);
+        out.writeObject(obj);
+    }
+
+-----------------------------------------------------------------
+
+7. Nio ile fayla yazmaq    
+    public static void writeBytesNio(byte[] data, String fileName) throws Exception {
+        Path filePath = Paths.get(fileName);
+        Files.write(filePath, data);
+    }
+
+-----------------------------------------------------------------
+
+8. Nio ile fayldan oxumaq   
+    public static byte[] readBytesNio(String fileName) throws Exception {
+        Path filePath = Paths.get(fileName);
+        byte[] data = Files.readAllBytes(filePath);
+        return data;
+    }
+
+------------------------------------------------------------------
+
+public class User {
+    
+    public static String Company;
+    
+9. Classin icherisi editlenenden sonra Class evvelki vaziyyetde iken yaratdigimiz obyekti fayldan chagirmaq uchun 
+
+    private static final long serialVersionUID = 1L;
+    public String name;
+    
+10. obyektin sechilmish parametrinin deyerini obyekte yazmamaq uchun transient keywordu ishledirik  
+  
+    public transient String password;
+    public int i;
+}

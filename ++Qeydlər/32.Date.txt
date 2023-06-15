@@ -1,0 +1,23 @@
+1. Date d = new Date();
+
+2. d.toString();
+
+3. d.getTime();
+
+4. SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+   String date = sdf.format(d);
+   sout(date);
+
+5. String s = "14.06.2023";
+   Date dd = sdf.parse(s);
+   sout(dd);
+   
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+1. Iki ferqli package Eyni adli class olanda, onlari import elemek uchun
+    import java.util.Date;
+    import java.sql.*;
+Classin adini qeyd edib import elemek Wildcard ile elemeyi usteleyir. Burda birinci util-deki Date import olundugundan. sql-deki Date-den bashqa hamisi import olur.
+Eger sql Date lazim olsa ashagidaki kimi ede bilerik.
+
+Fully qualified class name ishlederek de her iki classi lazim olan yerlerde ishlede bilerk
+public class Conflicts {
+    java.util.Date date;
+    java.sql.Date sqlDate;
+}
+
+import java.nio.*; // NO GOOD – a wildcard only matches class names, not "file.*Files"
+import java.nio.*.*; // NO GOOD – you can only have one wildcard and it must be at the end
+import java.nio.files.Paths.*; // NO GOOD – you cannot import methods only class names
+
+java.lang.*;  Default olaraq butun Classlarda import olunub
+
+-----------------------------------------------------
+
+2. JVM classi Run eleyende ona Argument gondermek
+
+public class Zoo {
+   public static void main(String[] args) {
+       System.out.println(args[0]);
+       System.out.println(args[1]);
+       System.out.println(args[2]);
+   } 
+}
+
+$ javac Zoo.java
+$ java Zoo  "First argument" SecondArgument  3
+
+-----------------------------------------------------
+
+3. Comments
+
+// Single-line comment - comment until end of line
+
+/* Multiple
+* line comment (also known as a multiline comment)
+*/ 
+
+/**
+* Javadoc multiple-line comment
+* @author Jeanne and Scott
+*/
+
+----------------------------------------------------
+
+4. 64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
